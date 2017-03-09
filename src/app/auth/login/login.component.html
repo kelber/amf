@@ -1,0 +1,74 @@
+
+
+ <!-- Modal Structure -->
+ <div id="modal1" class="modal">
+   <div class="modal-content">
+     <h4>Email Details</h4>
+     <p>If you have a FACEBOOK account and your email is from google. ex. @gmail.com . <br> Try to login using google </p>
+   </div>
+ </div>
+
+   <div class="row">
+     <br>
+     <br>
+       <div class="col m4 l3"></div>
+                    <div class="col s12 m6 l6 card blue-grey lighten-3">
+                      <div class="blue-grey lighten-3">
+                        <br>
+                          <a class="waves-effect waves-light white-text" [routerLink]="['/']">Back to Home </a>
+                          <!-- Modal Trigger -->
+                           <a class="waves-effect waves-light right white-text" href="#modal1"><i class="material-icons">info_outline</i></a>
+
+                        <div class="center">
+                        <h3 class="white-text">Login</h3>
+                        <a class="waves-effect waves-light white-text" [routerLink]="['/auth/signup']">Don't have a account ? click here </a>
+                      </div>
+                        <!-- <span class="card-title">Card Title</span> -->
+                        <!-- <img id="lock" src="../assets/lock.svg" alt="lock"  width="55"> -->
+                        <div align="center">
+                        <span class="error" *ngIf="error">{{ error }}</span>
+                        </div>
+
+                        <!-- <div class="card-content">
+                          <form [formGroup]="formLogin" >
+                            <div class="input-field col s12">
+                              <input type="email" class="validate" name="email" formControlName="email" required>
+                              <label for="email" align="left">Email</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input id="Password" type="password" class="validate" name="password" formControlName="password" required>
+                              <label for="Password"  align="left">Password</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <a type="submit" class="waves-effect waves-light btn col s12 m12 l12" *ngIf="formLogin.valid"(click)="onSubmit(formLogin)">Login</a>
+                              <br>
+                              <br>
+                              <br>
+                              <br>
+                            </div>
+                          </form>
+                        </div> -->
+
+                      </div>
+                            <div class="input-field col s12">
+                              <br>
+                              <br>
+                              <a type="submit" class="waves-effect waves-light btn col s12 m12 l12 grey lighten-1 z-depth-2" [routerLink]="['/auth/email']">Login Email</a>
+                              <br>
+                              <br>
+                              <br>
+                              <a type="submit" class="waves-effect waves-light btn col s12 m12 l12 red z-depth-4" (click)="loginG()">Login Google</a>
+                              <br>
+                              <br>
+                              <br>
+                              <a type="submit" class="waves-effect waves-light btn col s12 m12 l12 blue darken-3 z-depth-2" (click)="loginFace()">Login Facebook</a>
+                              <br>
+                              <br>
+                              <br>
+                            </div>
+
+
+                    </div>
+
+
+  </div>

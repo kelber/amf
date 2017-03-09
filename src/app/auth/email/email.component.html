@@ -1,0 +1,67 @@
+<div class="row">
+  <br>
+  <br>
+    <div class="col m4 l3"></div>
+                 <div class="col s12 m6 l6 card blue-grey lighten-3">
+                   <div class="blue-grey lighten-3">
+                     <a class="waves-effect waves-light white-text" [routerLink]="['/auth/login']">Back to login </a>
+
+                     <div class="center">
+                     <h3 class="white-text">Login with Email</h3>
+                     <a class="waves-effect waves-light white-text" [routerLink]="['/auth/signup']">Don't have a account ? click here </a>
+                   </div>
+                     <!-- <span class="card-title">Card Title</span> -->
+                     <!-- <img id="lock" src="../assets/lock.svg" alt="lock"  width="55"> -->
+                     <div align="center">
+                     <span class="error" *ngIf="error">{{ error }}</span>
+                     </div>
+
+                     <!-- <div class="card-content">
+                       <form [formGroup]="formLogin" >
+                         <div class="input-field col s12">
+                           <input type="email" class="validate" name="email" formControlName="email" required>
+                           <label for="email" align="left">Email</label>
+                         </div>
+                         <div class="input-field col s12">
+                           <input id="Password" type="password" class="validate" name="password" formControlName="password" required>
+                           <label for="Password"  align="left">Password</label>
+                         </div>
+                         <div class="input-field col s12">
+                           <a type="submit" class="waves-effect waves-light btn col s12 m12 l12" *ngIf="formLogin.valid"(click)="onSubmit(formLogin)">Login</a>
+                           <br>
+                           <br>
+                           <br>
+                           <br>
+                         </div>
+                       </form>
+                     </div> -->
+
+                   </div>
+                         <div class="input-field col s12">
+                           <div class="card-content">
+                             <form [formGroup]="formLogin" >
+                               <div class="input-field col s12">
+                                 <input type="email" class="validate" name="email" formControlName="email" required>
+                                 <label for="email" align="left">Email</label>
+                               </div>
+                               <div class="input-field col s12">
+                                 <input id="Password" type="password" class="validate" name="password" formControlName="password" required>
+                                 <label for="Password"  align="left">Password</label>
+                               </div>
+                               <div class="input-field col s12">
+                                 <a type="submit" class="waves-effect waves-light btn col s12 m12 l12" *ngIf="formLogin.valid"(click)="onSubmit(formLogin)">Login</a>
+                                 <br>
+                                 <br>
+                                 <br>
+                                 <br>
+                               </div>
+                             </form>
+                           </div>
+
+                         </div>
+
+
+                 </div>
+
+
+</div>

@@ -1,0 +1,62 @@
+
+
+   <!-- Modal Structure -->
+   <div id="modal1" class="modal">
+     <div class="modal-content">
+       <h4 align="center">Terms and Condictions</h4>
+       <p>This is the terms for use the software.</p>
+     </div>
+     <div class="modal-footer">
+       <!-- <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">I Agree</a> -->
+     </div>
+   </div>
+
+
+<div class="area">
+<div class="row">
+  <br>
+  <br>
+    <div class="col m4 l3"></div>
+       <div class="col s12 m6 l6">
+
+         <div class="card blue-grey lighten-3">
+            <div class="card-content center">
+           <a class="waves-effect waves-light white-text left" [routerLink]="['/auth/login']">Back to login page</a>
+           <br>
+           <br>
+           <span class="card-title white-text" align="center">Register  </span>
+             <!-- <img id="lock" src="../assets/lock.svg" alt="lock"  width="55"> -->
+             <span class="error" *ngIf="error">{{ error }}</span>
+             <br>
+              <br>
+
+                <form #formRegister='ngForm' >
+                      <div class="input-field col s12">
+                        <input type="email" class="validate" name="email" (ngModel)="email" required>
+                        <label for="email" align="left">Email</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <input id="Password" type="password" class="validate" name="password" (ngModel)="password" required>
+                        <label for="Password"  align="left">Password</label>
+                      </div>
+
+                      <!-- <div class="input-field col s12"> -->
+                        <p>
+                        <input type="checkbox" id="test5" required/>
+                        <label for="test5"><a href="#modal1">I Read the terms</a></label>
+                        </p>
+                        <a type="submit" class="waves-effect waves-light btn col s12 m12 l12" *ngIf="formRegister.valid" (click)="onSubmit(formRegister)" >Register <i class="material-icons">send</i></a>
+                      <!-- </div> -->
+                      <br>
+                      <br>
+               </form>
+
+
+           </div>
+
+
+
+</div>
+
+<!-- area -->
+</div>

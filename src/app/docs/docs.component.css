@@ -1,0 +1,32 @@
+
+.textNunito {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+h5 , h3, a, span {
+
+  font-family: 'Nunito', sans-serif;
+}
+
+
+.active {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.tabs {
+  background-color: transparent;
+
+}
+
+/*
+a {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+span  {
+  font-family: 'Nunito', sans-serif;
+}*/

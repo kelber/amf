@@ -1,0 +1,45 @@
+
+<!-- pode usar divs para separara conteudo
+        OU USAR OFFSET
+ OFFSET-L3  para grandes telas -->
+
+<!-- ERRO DO CARD E PASSAR PARA DIV DE CIMA -->
+
+   <div class="row">
+     <br>
+     <br>
+       <div class="col m4 l3"></div>
+                    <div class="col s12 m6 l6 card blue-grey lighten-3">
+                      <div class="blue-grey lighten-3">
+                        <h3 align="center" class="white-text">Register</h3>
+                        <!-- <span class="card-title">Card Title</span> -->
+                        <!-- <img id="lock" src="../assets/lock.svg" alt="lock"  width="55"> -->
+                        <div align="center">
+                        <span class="error" *ngIf="error">{{ error }}</span>
+                        </div>
+
+                        <div class="card-content  ">
+                          <form [formGroup]="formRegister" >
+                            <div class="input-field col s12">
+                              <input type="email" class="validate" name="email" formControlName="email" required>
+                              <label for="email" align="left">Email</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input id="Password" type="password" class="validate" name="password" formControlName="password" required>
+                              <label for="Password"  align="left">Password</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <a type="submit" class="waves-effect waves-light btn col s12 m12 l12" *ngIf="formRegister.valid"(click)="onSubmit(formRegister)">Register</a>
+                              <!-- <a type="submit" class="waves-effect waves-light btn col s12 m12 l12"   *ngIf="formData.valid" (click)="onSubmit(formData)" >Login</a> -->
+                              <br>
+                              <br>
+                              <br>
+                              <br>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+
+  </div>
