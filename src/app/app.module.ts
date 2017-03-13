@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
+
 // Materialize
 // import 'materialize-css';
 // import 'angular2-materialize';
@@ -27,12 +29,6 @@ import { AuthGuardService } from './auth/auth-guard.service';
 import { Observable } from 'rxjs/Observable';
 
 
-const firebaseAuthConfig = [
-  { providers: AuthProviders.Password, methods: AuthMethods.Popup },
-  { providers: AuthProviders.Google, methods: AuthMethods.Popup },
-  { providers: AuthProviders.Facebook, methods: AuthMethods.Popup },
-];
-
 
 @NgModule({
   declarations: [
@@ -46,7 +42,7 @@ const firebaseAuthConfig = [
     HttpModule,
     MaterializeModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
+    AngularFireModule.initializeApp(firebaseConfig),
     FormsModule
   ],
   providers: [ AuthService , AuthGuardService ],

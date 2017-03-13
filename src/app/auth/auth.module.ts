@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {  CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormGroup, FormBuilder } from '@angular/forms';
 
 import { AuthComponent } from './auth.component';

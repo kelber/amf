@@ -13,59 +13,20 @@ export class AuthGuardService {
   constructor(private authS: AuthService,
               public af: AngularFire,
               private router: Router) {
-
-
-    //  ???
-     console.log(this.af.auth);
-
-
-
+    //  console.log(this.af.auth);
    }
 
-   // this.af.auth.subscribe( auth => {
-   //   // console.log('auth do constructor');
-   //   this.router.navigate(['docs']);
-   // }
-
-
-    //  if (this.af.auth) {
-    //    this.af.auth.subscribe( auth => {
-    //       this.router.navigate(['/docs']);
-    //    })
-     //
-    //  }
-
-   user: FirebaseAuthState;
+ user: FirebaseAuthState;
 
  canActivate(): Observable<boolean> {
-          console.log('Rota de guarda au au');
+          console.log('Route Guards !! :< ');
          return this.authS.isAutenticated().do( authenticated => {
            if (!authenticated) this.router.navigate(['/auth/login']);
          });
    }
 
-
-    // funciona menos o currentUser
-  //  canActivate(): Observable<FirebaseAuthState> {
-  //    console.log('canActivate ligado');
-  //    if (this.user && this.af.auth && this.authS.currentUser) {
-  //        return this.authS.currentUser();
-  //    }
-  //    else {
-  //      console.log('canActivate redirecionando....');
-  //      !this.user && !this.af.auth;
-  //      this.router.navigate(['/auth/login']);
-  //    }
-   //
-  //  }
-
-
-
-
-
-
-
-   // AGORA INJETAR ONDE QUISER. canActivate: [ AuthGuardService ]
+   // in the ROUTES:
+   // canActivate: [ AuthGuardService ]
 
 
 

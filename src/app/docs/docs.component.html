@@ -24,6 +24,7 @@
         <span [routerLink]="['/']">Angular-Materialize</span>
      </a>
      <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <li><a [routerLink]="['/users']">Users</a></li>
        <li>Ta logado? {{ isLoggedIn }}</li>
        <li><a class="waves-effect waves-light btn" *ngIf="!isLoggedIn" [routerLink]="['/auth/login']" >User Area  </a></li>
        <!-- <li><a *ngIf="!isLoggedIn" [routerLink]="['/auth/signup']" class="active">Register</a></li> -->
