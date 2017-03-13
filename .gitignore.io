@@ -5,12 +5,14 @@
 ## Angular ##
 # compiled output
 /dist
+/dist/**
 /tmp
 /app/**/*.js
 /app/**/*.js.map
 
 # dependencies
 /node_modules
+/node_modules/**
 /bower_components
 
 
@@ -24,6 +26,7 @@ testem.log
 /typings
 
 # e2e
+/e2e
 /e2e/*.js
 /e2e/*.map
 
