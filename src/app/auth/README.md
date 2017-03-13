@@ -1,8 +1,10 @@
-# Firebase system authentication.
+# Firebase System Authentication.
 
 
 ### File Schema
 
+
+```js
 src
 --auth
 ---email
@@ -21,7 +23,7 @@ auth.service.ts
 ---signup --> Register Form
 
 
-
+```
 
 
 ## SIGNUP
@@ -543,4 +545,4 @@ export class AuthModule { }
 import { AuthService } from './auth/auth.service';
 import { AuthGuardService } from './auth/auth-guard.service';
 
-``` 
+```
