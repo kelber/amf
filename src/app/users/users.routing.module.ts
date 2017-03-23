@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { UsersComponent } from './users.component';
+import { AuthGuardService } from '../auth/auth-guard.service';
 
 
 let uRoutes = [
-  { path: '', component: UsersComponent }
+  { path: '', component: UsersComponent , canActivated: [ AuthGuardService ] }
 
 ];
 

@@ -1,5 +1,9 @@
 # Firebase System Authentication.
 
+# LOOK    
+
+https://github.com/asadsahi/ng2fb-bootstrap/blob/master/src/app/shared/services/auth.service.ts
+http://embed.plnkr.co/nvw1E7/
 
 ### File Schema
 

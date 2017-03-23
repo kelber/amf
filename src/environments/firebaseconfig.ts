@@ -1,10 +1,8 @@
 
   export const firebaseConfig = {
-    apiKey: "AIzaSyCfyXVJW5eCmBCvMihitrdr8ijcmBdFkvQ",
-       authDomain: "chat4win-744cf.firebaseapp.com",
-       databaseURL: "https://chat4win-744cf.firebaseio.com",
-       storageBucket: "chat4win-744cf.appspot.com",
-       messagingSenderId: "182596219459"
-
-
+          apiKey: "AIzaSyCV6C0HZU4LCV7rwTh4x8SJFGvRu4Cg4s4",
+          authDomain: "angular-materialize.firebaseapp.com",
+          databaseURL: "https://angular-materialize.firebaseio.com",
+          storageBucket: "angular-materialize.appspot.com",
+          messagingSenderId: "958380802098"
   }

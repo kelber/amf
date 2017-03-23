@@ -1,0 +1,25 @@
+<a [routerLink]="['/posts']">Back to posts</a>
+
+<a (click)=reload()><i class="material-icons">refresh</i></a>
+
+<!-- CASO RELOAD NAO APARECA TEM Q COLOCAR **ngIf="expression" -->
+<div *ngIf="post">
+<h3>Item</h3>
+<hr>
+
+
+<h3>{{ post.$key }} |  {{ post.chaveA }}</h3>
+
+<input type="text" [(ngModel)]="post.chaveA" />
+<!-- <input type="text" #newText [value]="post.chaveA" /> -->
+<!-- <a (click)="updatePost(post.$key, post.chaveA.value)">Update</a> -->
+<a (click)="onEditSubmit(post.$key, post.chaveA.value)">Update</a>
+<a (click)="onDeleteClick()">Delete</a>
+<!-- <a (click)="updatePost(post.$key, post.chaveA.value)">Update</a> -->
+<!-- <a (click)="updatePost(post)">Update</a> -->
+<!-- <a (click)="updatePost(post.$key, post.chaveA.value)">Update</a> -->
+<!-- <input type="text" #newText [value]="post.chaveA" /> -->
+
+<!-- <img src="{{ post.}}" alt=""> -->
+
+</div>

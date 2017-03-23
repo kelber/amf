@@ -1,0 +1,17 @@
+
+
+     <ul>
+        <li *ngFor="let post of posts | async" >
+
+
+          <p>{{ post.chaveA }} | <a [routerLink]="['/posts', post.$key]"  >Detalhe</a> | <a (click)="removerPost(post.$key)">Delete</a></p>
+          <!-- <input type="text" #newText [value]="post.chaveA" /> -->
+          <!-- <button (click)="updatePost(post.$key, newText.value)">Update</button> -->
+
+
+
+            <hr>
+        </li>
+
+        <br>
+      </ul>

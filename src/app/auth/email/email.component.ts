@@ -23,15 +23,20 @@ export class EmailComponent implements OnInit {
                 private fb: FormBuilder,
                 public af: AngularFire) {
 
-      //  Login Form
-      this.formLogin = this.fb.group({
-        email: this.email,
-        password: this.password
-      });
+
+      // LoginForm
+     this.formLogin = this.fb.group({
+      email: this.email,
+      password: this.password
+    });
+
 
 
       // end of constructor
     }
+
+
+
 
     // SIGNIN WORKING
     onSubmit(formLogin) {

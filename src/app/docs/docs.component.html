@@ -16,20 +16,38 @@
        </div>
 </ul>
 
+  <!-- Dropdown  ACCOUNT  -->
+ <ul id='dropdown1' class='dropdown-content'>
+   <li><a [routerLink]="['/account']">Account</a></li>
+   <li><a [routerLink]="['/profile']">Profile</a></li>
+   <li><a [routerLink]="['/posts']">Posts</a></li>
+   <li><a [routerLink]="['/games']">Posts</a></li>
+
+   <li class="divider"></li>
+   <li><a >three</a></li>
+ </ul>
 
 <nav>
-   <div class="nav-wrapper blue-grey">
+   <div class="nav-wrapper ">
      <a class="brand-logo">
        <a data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
         <span [routerLink]="['/']">Angular-Materialize</span>
      </a>
      <ul id="nav-mobile" class="right hide-on-med-and-down">
        <li><a [routerLink]="['/users']">Users</a></li>
-       <li>Ta logado? {{ isLoggedIn }}</li>
+       <!-- <li>Ta logado? {{ isLoggedIn }}</li> -->
        <li><a class="waves-effect waves-light btn" *ngIf="!isLoggedIn" [routerLink]="['/auth/login']" >User Area  </a></li>
        <!-- <li><a *ngIf="!isLoggedIn" [routerLink]="['/auth/signup']" class="active">Register</a></li> -->
        <!-- <li><a *ngIf="!isLoggedIn" [routerLink]="['/auth/login']">Login</a></li> -->
-       <li><a *ngIf="isLoggedIn" (click)="logout()">Logout</a></li>
+       <li></li>
+        <li class="valign">
+
+<a class="dropdown-button" data-activates="dropdown1">
+  <img src="{{ user?.auth.photoURL }}" alt="" class="circle " width="35">
+    <i class="material-icons right">arrow_drop_down</i>
+</a>
+        </li>
+       <li><a *ngIf="isLoggedIn" class="btn" (click)="logout()">Logout</a></li>
      </ul>
    </div>
  </nav>

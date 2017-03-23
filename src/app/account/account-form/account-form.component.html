@@ -1,0 +1,133 @@
+
+
+
+ <!-- <ul id="slide-out" class="side-nav">
+     <h5 align="center">Angular2-Materialize</h5>
+     <div class="collection">
+          <h5 class="collection-item active blue-grey center">Install </h5>
+              <a class="collection-item">How to Install</a>
+          <h5 class="collection-item active blue-grey center">Components</h5>
+              <a class="collection-item">Parallax</a>
+              <a class="collection-item">Sidenav</a>
+              <a class="collection-item">Tabs</a>
+             <a class="collection-item">DropDowns</a>
+             <a class="collection-item">Modals</a>
+             <a class="collection-item">Parallax</a>
+             <a class="collection-item">Parallax</a>
+       </div>
+ </ul> -->
+
+  <!-- Dropdown  ACCOUNT  -->
+ <ul id='dropdown1' class='dropdown-content'>
+   <li><a [routerLink]="['/account']">Account</a></li>
+   <li><a>two</a></li>
+   <li class="divider"></li>
+   <li><a >three</a></li>
+ </ul>
+
+ <nav>
+   <div class="nav-wrapper blue-grey">
+     <a class="brand-logo">
+       <a data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+        <span [routerLink]="['/']">Angular-Materialize</span>
+     </a>
+     <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <li><a [routerLink]="['/users']">Users</a></li>
+       <li>logado: {{ isLoggedIn }}</li>
+       <li><a class="waves-effect waves-light btn" *ngIf="!isLoggedIn" [routerLink]="['/auth/login']" >User Area  </a></li>
+       <!-- <li><a *ngIf="!isLoggedIn" [routerLink]="['/auth/signup']" class="active">Register</a></li> -->
+       <!-- <li><a *ngIf="!isLoggedIn" [routerLink]="['/auth/login']">Login</a></li> -->
+       <li><a [routerLink]="['/profile']">Profile</a></li>
+        <li></li>
+        <li class="valign">
+
+ <!-- <a class="dropdown-button" data-activates="dropdown1">
+  <img src="{{ user?.auth.photoURL }}" alt="" class="circle " width="35">
+    <i class="material-icons right">arrow_drop_down</i>
+ </a> -->
+        </li>
+       <li><a *ngIf="isLoggedIn" class="btn" (click)="logout()">Logout</a></li>
+     </ul>
+   </div>
+ </nav>
+
+
+<div class="row">
+ <div class="col s12 m6 l8">
+
+
+
+     <p *ngIf="name">{{ user?.name }}</p>
+     <div class="card white darken-3 blue-grey-text ">
+
+         <div class="row">
+            <div class="card-content ">
+         <h3 class="center"> Account Page</h3>
+           <!-- <a class="btn center" [routerLink]="['edit']">Edit</a> -->
+           <img src="{{ user?.auth.photoURL }}" alt="" class="circle">
+           <h5>{{ user?.auth.email }}</h5>
+       </div>
+
+
+         <div class="divider"></div>
+
+         <form #accountForm='ngForm'>
+         <div class="input-field col s12">
+           <input id="displayName" type="text" class="validate" name="displayName" (ngModel)="user?.auth.displayName" required>
+           <label for="Name"  align="left" class="active">Name</label>
+         </div>
+
+         <div class="input-field col s12">
+           <input id="email" type="text" class="validate" name="email" (ngModel)="user?.auth.email" required>
+           <label for="Email"  align="left" class="active">email</label>
+         </div>
+         <div class="input-field col s12">
+           <input id="Password" type="text" class="validate" name="password" (ngModel)="user?.auth.password" required>
+           <label for="Password"  align="left">Password</label>
+         </div>
+         <div class="input-field col s12">
+           <input id="about" type="text" class="validate" name="aboutYou" (ngModel)="user?.auth.aboutYou" required>
+           <label for="About You"  align="left" class="active">About You</label>
+         </div>
+         <div class="input-field col s12">
+         <input id="username" type="text" class="validate" name="username" (ngModel)="username" required>
+         <label for="username"  align="left">Username</label>
+       </div>
+       <div class="input-field col s12">
+       <input id="country" type="text" class="validate" name="country" (ngModel)="country" required>
+       <label for="country"  align="left">Country</label>
+     </div>
+       <br>
+       <br>
+       <!-- <div class=" col s12 m10 offset-l4 l12"> -->
+          <a type="submit" class="waves-effect waves-light btn center" (click)="onSubmit(accountForm)" onclick="Materialize.toast('Save User  with success', 4000)">Save User <i class="material-icons">send</i></a>
+        <!-- </div> -->
+       <br>
+       <br>
+       <br>
+   </form>
+       </div>
+
+     </div>
+
+</div>
+</div>
+
+
+
+          <!-- <h1 class="center-align textNunito">Angular2-Materialize</h1>
+          <h5 class="center-align textNunito"> Instructions for use Materialize library with Angular</h5>
+          <div class="center">
+          </div> -->
+<!--
+ <div class="row">
+ <div class="col s12 m4 l3 left blue-grey z-depth-2">
+
+     <div class="collection">
+        <a  class="collection-item blue-grey white-text active">Install </a>
+        <a  class="collection-item blue-grey white-text">Parallax</a>
+        <a  class="collection-item blue-grey white-text">Toast</a>
+        <a  class="collection-item blue-grey white-text">Sliders</a>
+     </div>
+
+ </div> -->

@@ -63,7 +63,7 @@ export class DocsComponent implements OnInit {
           });
             // $('.button-collapse').sideNav('show');
             $('ul.tabs').tabs();
-
+            $('.dropdown-button').dropdown();
 
             // F.U.N.C.I.O.N.A.N.D.O  currentUser() e estado
             let user = this.authS.currentUser().subscribe( user => {
@@ -72,8 +72,6 @@ export class DocsComponent implements OnInit {
               this.user = user;
               // FUNCIONANDO PHOTO AKI
               this.user.auth.photoURL;
-
-
             }
           });
 

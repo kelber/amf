@@ -27,6 +27,7 @@ import { AuthGuardService } from './auth/auth-guard.service';
 
 // coloquei por que apitava fromPromise ERRO
 import { Observable } from 'rxjs/Observable';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -34,7 +35,8 @@ import { Observable } from 'rxjs/Observable';
   declarations: [
     AppComponent,
     HomeComponent,
-    DocsComponent
+    DocsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
